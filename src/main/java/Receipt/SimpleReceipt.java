@@ -11,6 +11,9 @@ import java.util.function.Function;
 
 /**
  * Created by plongobucco on 24/03/18.
+ *
+ * This class is used to print the receipt of an order
+ *
  */
 public class SimpleReceipt implements Receipt {
 
@@ -29,6 +32,11 @@ public class SimpleReceipt implements Receipt {
         out.printf("\n-------------------- Order Receipt ------------------\n\n");
     }
 
+    /**
+     * Print the list of products contained in the order
+     *
+     * @param products The the list of products
+     */
     @Override
     public void printProductsInfo(List<Product> products) {
 
@@ -39,6 +47,11 @@ public class SimpleReceipt implements Receipt {
 
     }
 
+    /**
+     * Print the details of the prices of the products
+     *
+     * @param prices The list of product prices
+     */
     @Override
     public void printSalesTax(List<Price> prices) {
 
@@ -47,6 +60,11 @@ public class SimpleReceipt implements Receipt {
                 .reduce(BigDecimal.ZERO, BigDecimal::add));
     }
 
+    /**
+     * Print the order total
+     *
+     * @param prices The list of product prices
+     */
     @Override
     public void printTotal(List<Price> prices) {
 
@@ -56,7 +74,6 @@ public class SimpleReceipt implements Receipt {
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
 
         out.printf("%39s       %7s\n", "Total", result);
-
 
     }
 

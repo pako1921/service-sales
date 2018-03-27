@@ -1,7 +1,6 @@
 package models;
 
 import Receipt.Receipt;
-import tax.AbstractTax;
 import tax.Action;
 import tax.ImportedTax;
 import tax.LocalTax;
@@ -12,6 +11,9 @@ import java.util.stream.Collectors;
 
 /**
  * Created by plongobucco on 24/03/18.
+ *
+ * The class represents the structure of an order, containing the list of product
+ *
  */
 public class Order {
 
@@ -23,6 +25,12 @@ public class Order {
         taxes.add(new ImportedTax());
     }
 
+    /**
+     * Adds a product to the list
+     *
+     * @param product The product to add to the list
+     *
+     */
     public void add(Product product) {
 
         Product processedProduct = product;
@@ -36,6 +44,12 @@ public class Order {
         products.add(processedProduct);
     }
 
+    /**
+     * Call the print of the order receipt
+     *
+     * @param receipt print order console
+     *
+     */
     public void print(Receipt receipt) {
         receipt.headerReceipt();
         receipt.printProductsInfo(products);

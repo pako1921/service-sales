@@ -12,6 +12,9 @@ import java.util.Map;
 
 /**
  * Created by plongobucco on 27/03/18.
+ *
+ * The class returns the orders made with the product details, represents a mock
+ *
  */
 public class OrderService {
 
@@ -54,6 +57,11 @@ public class OrderService {
 
     }
 
+    /**
+     * Return the list of products of a specific order
+     *
+     * @param idBasket The id of an order
+     */
     public static List<Product> getBasket(Integer idBasket) {
 
         return mapBaskets.get(idBasket);

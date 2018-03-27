@@ -8,6 +8,9 @@ import java.math.RoundingMode;
 
 /**
  * Created by plongobucco on 25/03/18.
+ *
+ * The class establishes whether to apply the local tax on the product
+ *
  */
 public class LocalTax extends AbstractTax {
 

@@ -5,6 +5,9 @@ import java.math.RoundingMode;
 
 /**
  * Created by plongobucco on 25/03/18.
+ *
+ * The class represents the detail of the price of a product
+ *
  */
 public class Price {
 

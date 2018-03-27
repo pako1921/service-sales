@@ -2,6 +2,10 @@ package models;
 
 /**
  * Created by plongobucco on 25/03/18.
+ *
+ * The class represents the structure of a product, containing quantity, description,
+ * origin, type and price detail
+ *
  */
 public class Product {
 
